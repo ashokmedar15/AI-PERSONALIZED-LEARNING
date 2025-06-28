@@ -9,80 +9,156 @@ A modern, AI-powered educational platform built with Next.js, designed to provid
 - **Interactive Lessons**: Step-by-step educational content with notes, videos, and practice problems.
 - **Multi-Subject Support**: Mathematics, Physics, Computer Science, Biology, Chemistry, and more.
 - **Progress Tracking**: Monitor your learning progress and achievements.
-- **Modern UI**: Responsive design using Tailwind CSS and shadcn/ui components.
-- **API Integration**: All educational content and chatbot features are powered by Next.js API routes.
+- **Responsive Design**: Modern UI built with Tailwind CSS and shadcn/ui.
+- **Real-time AI Integration**: Live chat with educational AI assistant.
 
 ## 🛠️ Tech Stack
 
-- **Next.js 14** (App Router)
-- **TypeScript**
-- **Tailwind CSS**
-- **shadcn/ui**
-- **Groq AI API** (for chatbot)
+- **Frontend**: Next.js 14, React 18, TypeScript
+- **Styling**: Tailwind CSS, shadcn/ui components
+- **AI Integration**: Groq AI API for intelligent responses
+- **Deployment**: Vercel (recommended)
+- **Package Manager**: npm
 
-## 📦 Project Structure
+## 📁 Project Structure
 
 ```
-app/
-  api/                # Next.js API routes (chatbot, educational content, personalization)
-  dashboard/          # Main dashboard page
-  lesson/             # Lesson page with step-by-step content
-  login/              # Authentication page
-  globals.css         # Global styles
-  layout.tsx          # App layout
-components/
-  ai-chatbot.tsx      # Main chatbot component
-  ai-educational-counselor.tsx # Floating AI chat button
-  auth-provider.tsx   # Authentication context
-  content-generator.tsx # Content generation logic
-  ui/                 # UI components (button, card, input, etc.)
-lib/
-  utils.ts            # Utility functions
+personalized-quiz-generator/
+├── app/                    # Next.js app directory
+│   ├── api/               # API routes
+│   │   ├── chatbot/       # AI chatbot API
+│   │   ├── educational-content/  # Educational content API
+│   │   └── personalize-content/  # Content personalization API
+│   ├── dashboard/         # Dashboard page
+│   ├── lesson/           # Lesson page
+│   ├── login/            # Login page
+│   ├── globals.css       # Global styles
+│   ├── layout.tsx        # Root layout
+│   └── page.tsx          # Home page
+├── components/            # React components
+│   ├── ui/               # shadcn/ui components
+│   ├── ai-chatbot.tsx    # AI chatbot component
+│   ├── ai-educational-counselor.tsx  # Educational counselor
+│   └── content-generator.tsx  # Content generation
+├── lib/                  # Utility functions
+└── public/               # Static assets
 ```
 
-## ⚡ Getting Started
+## 🚀 Quick Start
 
-1. **Clone the repository:**
+### Prerequisites
+
+- Node.js 18+ 
+- npm or yarn
+- Groq AI API key (get from [console.groq.com](https://console.groq.com/))
+
+### Installation
+
+1. **Clone the repository**
    ```bash
    git clone https://github.com/ashokmedar15/AI-powered-educational-platform.git
    cd AI-powered-educational-platform
    ```
-2. **Install dependencies:**
+
+2. **Install dependencies**
    ```bash
    npm install
    ```
-3. **Set up environment variables:**
-   - Copy `.env.example` to `.env.local` and add your `GROQ_API_KEY` (get it from https://console.groq.com/)
-4. **Run the development server:**
+
+3. **Set up environment variables**
+   ```bash
+   cp env.example .env.local
+   ```
+   
+   Edit `.env.local` and add your Groq API key:
+   ```
+   GROQ_API_KEY=your_groq_api_key_here
+   ```
+
+4. **Run the development server**
    ```bash
    npm run dev
    ```
-   The app will be available at [http://localhost:3000](http://localhost:3000)
 
-## 🌐 Deployment
+5. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
 
-- Deploy easily to [Vercel](https://vercel.com/) by importing your GitHub repository and setting the `GROQ_API_KEY` environment variable.
-- See `DEPLOYMENT_GUIDE.md` for step-by-step deployment instructions.
+## 📚 Available Subjects
 
-## 📚 Documentation
+- **Mathematics**: Algebra, Calculus, Geometry, Statistics
+- **Physics**: Mechanics, Thermodynamics, Electromagnetism, Quantum Physics
+- **Computer Science**: Programming, Data Structures, Algorithms, Web Development
+- **Biology**: Cell Biology, Genetics, Ecology, Human Anatomy
+- **Chemistry**: Organic Chemistry, Inorganic Chemistry, Biochemistry
+- **Literature**: Poetry, Prose, Drama, Literary Analysis
 
-- See `SETUP_INSTRUCTIONS.md` for local setup and environment configuration.
-- See `DEPLOYMENT_GUIDE.md` for Vercel deployment steps.
-- See `GITHUB_SETUP_GUIDE.md` for repository management tips.
+## 🎯 Key Features Explained
 
-## 🤖 AI Chatbot Usage
+### AI Educational Counselor
+- Real-time chat with AI assistant
+- Study strategy recommendations
+- Career guidance and advice
+- Subject-specific help
+- Learning technique suggestions
 
-- The AI Educational Counselor is available on all pages via the floating chat button.
-- The chatbot uses the Groq API for intelligent, context-aware responses.
+### Personalized Learning
+- Adaptive content based on learning style
+- Difficulty level adjustment
+- Progress tracking
+- Customized learning paths
+- Interactive exercises
 
-## 📝 Contributing
+### Interactive Lessons
+- Step-by-step explanations
+- Video resources
+- Practice problems
+- External resources
+- Progress indicators
 
-Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
+## 🚀 Deployment
 
-## 📄 License
+### Deploy to Vercel (Recommended)
 
-This project is licensed under the MIT License.
+1. **Push to GitHub**
+   ```bash
+   git add .
+   git commit -m "Initial commit"
+   git push origin main
+   ```
+
+2. **Deploy on Vercel**
+   - Go to [vercel.com](https://vercel.com)
+   - Import your GitHub repository
+   - Add environment variable: `GROQ_API_KEY`
+   - Deploy!
+
+### Environment Variables
+
+- `GROQ_API_KEY`: Your Groq AI API key (required)
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- [Next.js](https://nextjs.org/) for the amazing React framework
+- [Tailwind CSS](https://tailwindcss.com/) for the utility-first CSS framework
+- [shadcn/ui](https://ui.shadcn.com/) for the beautiful component library
+- [Groq AI](https://groq.com/) for the AI API services
+
+## 📞 Support
+
+If you have any questions or need help, please open an issue on GitHub or contact the maintainers.
 
 ---
 
-**AI-Powered Educational Platform** – Personalized, adaptive, and intelligent learning for everyone.
+**Made with ❤️ for better education**
